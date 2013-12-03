@@ -4,7 +4,7 @@ Donate link: http://osclass.com/
 Tags: jobs, job, career, manager, vacancy, hiring, hire, listing, social, media, recruiting, recruitment, employer, application, board
 Requires at least: 3.0
 Tested up to: 3.7.1
-Stable tag: 1.0
+Stable tag: 1.0.1
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -66,5 +66,10 @@ You can visit our [http://osclass.com/faq](http://osclass.com/faq "osclass.com")
 
 == Changelog ==
 
+= 1.1 =
+
+* Use wordpress functions to get feed content.
+
 = 1.0 =
+
 * Initial Release

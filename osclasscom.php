@@ -153,7 +153,8 @@ if ( ! function_exists( 'osclasscom_embed_shortcode' ) ) :
          *
          */
         $urlFeed = get_option('osclasscom').'/search?sFeed=rss';
-        $xmlstr = file_get_contents($urlFeed);
+        $result = wp_remote_get($urlFeed);
+        $xmlstr = $result['body'];
 
         $vacancies = new SimpleXMLElement($xmlstr);
 
