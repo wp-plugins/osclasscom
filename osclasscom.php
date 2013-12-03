@@ -3,7 +3,7 @@
 Plugin Name: Osclass job board
 Plugin URI: http://osclass.com
 Description: Embed your osclass job board inside your wordpress.
-Version: 1.0
+Version: 1.0.1
 Text Domain: osclasscom
 Author: Osclass team
 Author URI: http://osclass.com
