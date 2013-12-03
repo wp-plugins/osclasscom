@@ -66,7 +66,7 @@ You can visit our [http://osclass.com/faq](http://osclass.com/faq "osclass.com")
 
 == Changelog ==
 
-= 1.1 =
+= 1.0.1 =
 
 * Use wordpress functions to get feed content.
 
