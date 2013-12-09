@@ -3,7 +3,7 @@
 Plugin Name: Osclass job board
 Plugin URI: http://osclass.com
 Description: Embed your osclass job board inside your wordpress.
-Version: 1.0.1
+Version: 1.1
 Text Domain: osclasscom
 Author: Osclass team
 Author URI: http://osclass.com
@@ -11,26 +11,17 @@ Tags: jobs, job, career, manager, vacancy, hiring, hire, listing, social, media,
 License: GPLv2
 */
 
-// admin menu entrie
-add_action( 'admin_menu', 'osclasscom_custom_admin_page');
-
-function osclasscom_custom_admin_page() {
-    $page_hook_suffix = add_menu_page('Osclass job board', 'Osclass job board', 'administrator',
-     'osclasscom/create.php', '', plugins_url('osclasscom/images/icon.png'));
+// If this file is called directly, abort.
+if( !defined('WPINC') ) {
+    die;
 }
 
-function osclasscom_admin_scripts($hook) {
-    if($hook!='osclasscom/create.php')
-        return;
-    /* Link our already registered script to a page */
-    wp_enqueue_script(
-            'osclasscom-jquery-validate', plugin_dir_url(__FILE__) . 'js/jquery.validate.min.js', array('jquery'), '1.10.0', true
-    );
-    wp_enqueue_script(
-            'osclasscom_create', plugin_dir_url(__FILE__) . 'js/create.js', array('jquery', 'osclasscom-jquery-validate'), '1.10.0', true
-    );
+require_once('class-osclasscom.php');
+add_action( 'plugins_loaded', array( 'Osclasscom', 'get_instance' ) );
+
+function print_create_osclasscom() {
+    require_once('create.php');
 }
-add_action( 'admin_enqueue_scripts', 'osclasscom_admin_scripts' );
 
 /**
  * Called via ajax on lastest step of site creation.
@@ -53,30 +44,17 @@ function osclasscom_delete_post( $postid ){
     }
 }
 
-// ajax
-add_action('admin_footer', 'osclass_bind_javascript');
-function osclass_bind_javascript() { ?>
-    <script type="text/javascript" >
-
-        function ajax_osclass(json) {
-            var data = {
-                action: 'create_bind',
-                site: json.site_url,
-                key: json.key
-            }
-
-            jQuery.post(ajaxurl, data, function(response) {
-                if(response.success) {
-                    /* redirect */
-                    location.reload(true);
-                } else {
-                    /* error */
-                }
-            }, 'json');
-        }
-    </script>
-    <?php
+//
+add_action('wp_ajax_check_apikey', 'osclasscom_check_apikey');
+function osclasscom_check_apikey() {
+    $data    = $_POST['data'];
+    $domain  = $data['domain'];
+    $apikey  = $data['apikey'];
+    $result  = wp_remote_get("http://{$domain}.osclass.com/index.php?page=ajax&action=runhook&hook=check_api_key&api_key={$apikey}");
+    echo($result['body']);
+    die();
 }
+
 
 add_action('wp_ajax_create_bind', 'osclass_create_bind');
 function osclass_create_bind() {
@@ -153,35 +131,33 @@ if ( ! function_exists( 'osclasscom_embed_shortcode' ) ) :
          *
          */
         $urlFeed = get_option('osclasscom').'/search?sFeed=rss';
-        $result = wp_remote_get($urlFeed);
-        $xmlstr = $result['body'];
+        $result  = wp_remote_get($urlFeed);
+        $xmlstr  = $result['body'];
 
         $vacancies = new SimpleXMLElement($xmlstr);
-
-
-            if(count($vacancies->channel->item) > 0) {
-                foreach($vacancies->channel->item as $vacancy) {
-                    $trimed_content = '';
-                    if(function_exists('wp_trim_words')) {
-                        $trimed_content = wp_trim_words( $vacancy->description,  25, '...' );
-                    } else {
-                        $trimed_content = osclasscom_get_the_excerpt($vacancy->description, 25, '[...]');
-                    }
-                    $newHtml .= '<h3 class="osclasscomJobListElementHeader">';
-                    $newHtml .= '    <a href="'.$vacancy->link.'" title="'.$vacancy->title.'">'.$vacancy->title.'</a>';
-                    $newHtml .= '</h3>';
-                    $newHtml .= '<div><b>'.date('Y-m-d', strtotime($vacancy->pubDate)).'</b>  '.$trimed_content.'</div>';
-
+        if(count($vacancies->channel->item) > 0) {
+            foreach($vacancies->channel->item as $vacancy) {
+                $trimed_content = '';
+                if(function_exists('wp_trim_words')) {
+                    $trimed_content = wp_trim_words( $vacancy->description,  25, '...' );
+                } else {
+                    $trimed_content = osclasscom_get_the_excerpt($vacancy->description, 25, '[...]');
                 }
-            } else {
-                $newHtml .= '<h3>'.__('Currently no job vacancies available', 'osclasscom').'</h3>';
-            }
-            if(count($vacancies->channel->item) > 0) {
-                $newHtml .= "<p style='float:right;'><a target='_blank' href='".$vacancies->channel->link."'>".__('View all offers','osclasscom')."</a></p>";
-            }
-            $newHtml .= "<p class='linkosclass'><a href='http://osclass.com'><img class='logoosclass' src='".plugins_url('osclasscom/images/osclass-wp.png')."'/></a></p>";
+                $newHtml .= '<h3 class="osclasscomJobListElementHeader">';
+                $newHtml .= '    <a href="'.$vacancy->link.'" title="'.$vacancy->title.'">'.$vacancy->title.'</a>';
+                $newHtml .= '</h3>';
+                $newHtml .= '<div><b>'.date('Y-m-d', strtotime($vacancy->pubDate)).'</b>  '.$trimed_content.'</div>';
 
-            return $newHtml;
+            }
+        } else {
+            $newHtml .= '<h3>'.__('Currently no job vacancies available', 'osclasscom').'</h3>';
+        }
+        if(count($vacancies->channel->item) > 0) {
+            $newHtml .= "<p style='float:right;'><a target='_blank' href='".$vacancies->channel->link."'>".__('View all offers','osclasscom')."</a></p>";
+        }
+        $newHtml .= "<p class='linkosclass'><a href='http://osclass.com'><img class='logoosclass' src='".plugins_url('osclasscom/images/osclass-wp.png')."'/></a></p>";
+
+        return $newHtml;
     }
     add_shortcode( 'osclasscom', 'osclasscom_embed_shortcode' );
 
