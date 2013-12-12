@@ -12,8 +12,10 @@
     $lang["js_site_exists"]         = __("Sorry, that site does not already exists!", 'osclasscom');
     $lang["js_sending"]             = __("Sending...", 'osclasscom');
     $lang["js_submit"]              = __("Sign up for free!", 'osclasscom');
+    $lang["js_connect_now"]         = __("Connect now!", 'osclasscom');
     $lang["js_language_required"]   = __("Please select your language", 'osclasscom');
     $lang["js_api_key_required"]    = __("Please enter your api key", 'osclasscom');
+    $lang["js_connect_error"]       = __("Error connecting to your site. Check the API Key you've entered is correct.", 'osclasscom');
 
     $ajax = array();
     $ajax["domain"]         = "https://osclass.com/api/site_exist";
@@ -25,16 +27,16 @@
     osclasscom.langs = <?php echo json_encode($lang); ?>;
     osclasscom.ajax  = <?php echo json_encode($ajax); ?>;
 </script>
-<div class="wrapper-box-container">
-    <div id="header">
+<div class="wrapper-box-container t-reset" id="wp-osclass">
+    <div id="header-osc">
         <div class="wrapper">
-            <span id="logo">
+	    <span id="logo-osc">
                 <strong>Osclass</strong>
             </span>
         </div>
         <?php if( !osclass_is_bind() ) { ?>
-        <div class="control-group show_menu_div">
-            <button id="show_menu" type="submit" class="btn btn-large" style=" width: auto;"><?php _e('Show menu', 'osclasscom'); ?></button>
+        <div class="control-group show_menu_div mgn-top-20">
+            <a href="#" id="show_menu" class="btn btn-large"><?php _e('Show menu', 'osclasscom'); ?></a>
         </div>
         <?php } ?>
     </div>

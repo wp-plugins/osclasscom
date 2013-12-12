@@ -57,11 +57,11 @@ jQuery(document).ready(function(){
         },
         errorElement: 'div',
         submitHandler: function(form) {
-            jQuery('button[type="submit"]').html(osclasscom.langs.js_sending);
+            jQuery('form#form_bind button[type="submit"]').html(osclasscom.langs.js_sending);
             if( typeof jQuery.prop === 'function' ) {
-                jQuery('button[type="submit"]').prop('disabled', true);
+                jQuery('form#form_bind button[type="submit"]').prop('disabled', true);
             } else {
-                jQuery('button[type="submit"]').attr('disabled', 'disabled');
+                jQuery('form#form_bind button[type="submit"]').attr('disabled', 'disabled');
             }
             jQuery('.spinner-wrapper').show();
 
@@ -83,27 +83,27 @@ jQuery(document).ready(function(){
                             key:      jQuery('.js-connect-api-key').val()
                         };
                         ajax_osclass(jsonObj);
+                    } else {
+                        jQuery('form#form_bind button[type="submit"]').html(osclasscom.langs.js_connect_now);
+                        if( typeof jQuery.prop === 'function' ) {
+                            jQuery('form#form_bind button[type="submit"]').prop('disabled', false);
+                        } else {
+                            jQuery('form#form_bind button[type="submit"]').removeAttr('disabled');
+                        }
+                        jQuery('.spinner-wrapper').hide();
+                        alert(osclasscom.langs.js_connect_error);
                     }
                 },
                 error:function(){
-                    jQuery('button[type="submit"]').html(osclasscom.langs.js_submit);
+                    jQuery('form#form_bind button[type="submit"]').html(osclasscom.langs.js_connect_now);
                     if( typeof jQuery.prop === 'function' ) {
-                        jQuery('button[type="submit"]').prop('disabled', false);
+                        jQuery('form#form_bind button[type="submit"]').prop('disabled', false);
                     } else {
-                        jQuery('button[type="submit"]').removeAttr('disabled');
+                        jQuery('form#form_bind button[type="submit"]').removeAttr('disabled');
                     }
                     jQuery('.spinner-wrapper').hide();
                 }
             });
-/*
-            jQuery.ajax({
-                url: 'http://'+jQuery("form#form_bind input[name='micro[domain]']").val()+'.osclass.com/index.php?page=ajax&action=runhook&hook=check_api_key&api_key='+jQuery("form#form_bind input[name='micro[api_key]']").val(),
-                type: 'get',
-                dataType: 'json',
-                success:function(json){
-                },
-            });
-*/
         }
     });
 

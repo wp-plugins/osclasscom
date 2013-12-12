@@ -1,10 +1,10 @@
 === Plugin Name ===
-Contributors: (garciademarina, juanramondiaz)
+Contributors: (garciademarina, juanramondiaz, osclass)
 Donate link: http://osclass.com/
 Tags: jobs, job, career, manager, vacancy, hiring, hire, listing, social, media, recruiting, recruitment, employer, application, board
 Requires at least: 3.0
-Tested up to: 3.7.1
-Stable tag: 1.1
+Tested up to: 3.8
+Stable tag: 1.2
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -62,9 +62,18 @@ You can visit our [http://osclass.com/faq](http://osclass.com/faq "osclass.com")
 
 == Screenshots ==
 
-1. An example of jobs in a WordPress site
+1. Create your job board
+2. Connect to your existing Osclass.com site
+3. An example of jobs in a WordPress site
+4. Job listing widget in the left sidebar
+5. Job listing widget in the right sidebar
 
 == Changelog ==
+
+= 1.2 =
+
+* Added a widget to list the last vacancies
+* Improved UI of first steps: sing up or connect existing job board.
 
 = 1.1 =
 
