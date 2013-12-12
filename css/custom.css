@@ -1,0 +1,69 @@
+#wpcontent #logo-osc {
+    background-image: url(../images/logo@1x.png);
+    background-size: 255px 138px;
+}
+.box-osclasscom h1 {
+    font-size: 3em;
+    font-weight: 100;
+}
+.box-osclasscom h2 {
+    font-size: 2em;
+    font-weight: 100;
+}
+.box-osclasscom .btn {
+    cursor: pointer;
+}
+.spinner-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.spinner {
+    z-index: 2;
+    display: block;
+    opacity: 1;
+}
+.spinner i {
+    margin-top: -100px;
+}
+.spinner-wrapper span {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    font-size: 2em;
+    width: 100%;
+    z-index: 3;
+}
+/*    */
+.step-content {
+    display: table;
+    margin: 0px auto;
+}
+
+.step-content .step-header {
+    height: 40px;
+}
+#wpcontent .step .step-content .wrapper {
+    padding: 5px 0 5px 0;
+}
+
+#wpcontent .step-content .form-horizontal .controls select{
+    width: 100%;
+}
+#wpcontent .form-horizontal .controls div.error {
+    width: 100%;
+    margin: 0px;
+}
+.show_menu_div {
+    display:none;
+    float: right;
+    padding-top: 15px;
+    padding-right: 30px;
+}
+#wpcontent .step .form-horizontal {
+    margin:0px;
+}

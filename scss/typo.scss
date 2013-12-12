@@ -1,0 +1,22 @@
+.t-center{
+  text-align: center;
+}
+.t-small{
+  font-size:0.75em;
+}
+.t-left{
+  text-align:left;
+}
+.t-white{
+  color:#ffffff;
+}
+h1,h2{
+  line-height: 1.2em;
+}
+.t-big{
+  font-size:pem(22);
+  line-height: 2.2em;
+}
+.white{
+  color: $color-white;
+}

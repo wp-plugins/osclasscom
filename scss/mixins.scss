@@ -1,0 +1,71 @@
+// Webkit-style focus
+// ------------------
+@mixin tab-focus() {
+// Default
+  outline: thin dotted #333;
+// Webkit
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+// CSS3 PROPERTIES
+// --------------------------------------------------
+
+// Border Radius
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+// Drop shadows
+@mixin box-shadow($shadow) {
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+//Pixels to ems
+$baseFontSize: 16;
+@function pem($pxval, $base: $baseFontSize) {
+  @return #{$pxval / $base}em;
+}
+
+
+/*
+@media screen and (max-width: 480px){
+  .stage{
+    font-size:48.979591837%;
+  }
+}*/
+
+
+@mixin responsive-font-size($min:480,$max:980,$selector:'.stage'){
+    $origin: $max;
+    @while $max >= $min {
+	    //@debug "dest:" $max;
+
+	    @include porcentaje($origin,$max);
+	    $max: $max - 1;
+    }
+}
+@mixin porcentaje($origin, $dest,$selector:'.stage'){
+    $output:($dest*100)/$origin;
+
+    @media screen and (max-width: #{$dest}px){
+      #{$selector}{
+       font-size:percentage($output/100);
+      }
+    }
+
+
+    //#{output}%
+}
+@mixin bucleIncrement($min:480,$max:980,$increment:5,$selector:'.stage',$tag:'margin-top',$unit:0px){
+    @while $max >= $min {
+	    //@debug "dest:" $max;
+	    #{$selector}#{$max}{
+	     #{$tag}:$max+$unit !important;
+	    }
+	    $max: $max - $increment;
+    }
+}

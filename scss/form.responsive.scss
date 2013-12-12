@@ -1,0 +1,88 @@
+@mixin form-responsive(){
+    .form-horizontal{
+	$width:100%;
+	display: block;
+	margin:0;
+	width:$width;
+
+	.control-group{
+	    width:$width;
+	    display: block;
+	    padding-top:8px;
+	}
+	.control-label {
+	    text-align: left;
+	    padding:0;
+	    width:$width;
+	}
+	.control-label,
+	.controls {
+	    display: block;
+	    padding-bottom:5px;
+	    width:$width;
+	}
+	.controls{
+	    min-width:$width;
+	    input[type="text"],
+	    input[type="password"],
+	    input[type="email"],
+	    textarea{
+		width:$width;
+		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		height: 46px;
+	    }
+	    textarea{
+		height: 120px;
+	    }
+	select {
+	    width: $width;
+	}
+	div.error{
+	    width: 100%;
+	}
+    }
+    }
+    body.demo {
+	.form-horizontal .controls {
+	    width: 100%;
+	}
+    }
+}
+/****/
+@mixin form-responsive-740(){
+    body.page-step-2{
+	@include form-responsive();
+	.step{
+	    .step-content{
+		margin:0 15px;
+		.tip{
+		    display: none;
+		}
+		.wrapper{
+		    margin: 0 auto;
+		    margin-left: 0;
+		}
+	    }
+	}
+    }
+}
+@media screen and (max-width: 740px){
+    @if $prefix != null {
+	#{$prefix}{
+	    @include form-responsive-740();
+	}
+    } @else {
+	@include form-responsive-740();
+    }
+}
+@media screen and (max-width: 640px){
+    @if $prefix != null {
+	#{$prefix}{
+	    @include form-responsive();
+	}
+    } @else {
+	@include form-responsive();
+    }
+}

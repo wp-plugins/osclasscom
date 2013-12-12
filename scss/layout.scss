@@ -1,0 +1,222 @@
+body{
+  margin:           0px;
+  padding:          0px;
+}
+body.cc {
+    .box-container {
+	top: 80px;
+    }
+}
+.rsp-show{
+  display: block;
+}
+.tbl [class*="span"].float-left,
+.float-left{
+  float:left;
+}
+.tbl [class*="span"].float-right,
+.float-right{
+  float:right;
+}
+.wrapper{
+  //min-width: 980px;
+  max-width:1170px;
+  margin:0 auto;
+  padding:0 15px;
+  position: relative;
+}
+.full-screen{
+  .box-container {
+    min-height: 100%;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+  .stage{
+    padding-top: 100px;
+    .control-label {
+      color: #FFF;
+    }
+  }
+}
+.clear{
+  clear:both;
+}
+@include bucleIncrement(0,55,5,'.mgn-top-','margin-top');
+
+  $i:24;
+
+.tbl{
+  $ancho:3%;
+  $margen:(100% - ($ancho* $i) )/($i - 1);
+
+  .row:before, .row:after {
+    display: table;
+    line-height: 0;
+    content: "";
+    clear: both;
+  }
+  [class*="span"] {
+    float:left;
+    margin-left: $margen;
+    width: (100% / $i);
+  }
+  [class*="span"]:first-child{
+    margin-left: 0;
+  }
+  @while $i > 0 {
+    //calcular el ancho
+    .span-#{$i} {
+      width: $ancho*$i +($margen*($i - 1));
+    }
+    .offset-#{$i} {
+      margin-left: $ancho*$i +($margen*$i);
+    }
+    $i: $i - 1;
+  }
+}
+.well-nav{
+  border-radius:5px;
+  margin:0;
+  padding:0;
+  list-style: none;
+    li{
+      a{
+	background-color:#e4e7ea;//#f2f2f2;
+	padding:7px 10px;
+	display: block;
+	text-decoration: none;
+	color:$color-main;
+      }
+      a:hover{
+	color:#fff;
+	background-color:$color-second;
+      }
+    }
+    li:first-child{
+      a{
+	@include border-radius(4px 4px 0 0);
+      }
+    }
+    li:last-child{
+      a{
+	@include border-radius(0 0 4px 4px);
+      }
+    }
+    li.active{
+	a{
+	  background-color:$color-main;
+	  color:#fff;
+	}
+      }
+}
+/*
+.tbl{
+  $i:12;
+  $ancho:6%;
+  $margen:(100% - ($ancho*12) )/($i - 1);
+
+  .row:before, .row:after {
+    display: table;
+    line-height: 0;
+    content: "";
+    clear: both;
+  }
+  [class*="span"] {
+    float:left;
+    margin-left: 2.5%;
+    width: (100%/12);
+  }
+  [class*="span"]:first-child{
+    margin-left: 0;
+  }
+  @while $i > 0 {
+    //calcular el ancho
+    .span-#{$i} {
+      width: $ancho*$i +($margen*($i - 1));
+    }
+    $i: $i - 1;
+  }
+}
+*/
+
+.hero-unit{
+  font-size:pem(26);
+  color:$color-main;
+  line-height: 1em;
+  padding-left:100px;
+  margin:0 auto;
+  position: relative;
+  width: 400px;
+
+  div.span{
+    display: block;
+    font-size: pem(18,26);
+    color:$color-second;
+    width: 400px;
+  }
+  .icon{
+    display: block;
+    position: absolute;
+    left:-70px;
+    width: 130px;
+    height: 130px;
+    top:-35px;
+
+    background-image:url('../img/p1.png');
+    background-repeat: no-repeat;
+  }
+  .icon-rounded{
+    background-image:none;
+    background-color:$color-second;
+    @include border-radius(100%);
+    [class*="icon-"] {
+      font-size: 88px;
+      left: 50%;
+      top:50%;
+      margin-left: -45px;
+      margin-top: -45px;
+      position: absolute;
+    }
+  }
+}
+.odd{
+    text-align:right;
+    padding-left:auto;
+    margin-left:auto;
+    padding-right:250px;
+    margin-right:100px;
+    .icon{
+	  right:70px;
+	  left:auto;
+    }
+    div.span{
+      float:none;
+      width: auto;
+      span{
+	float:right;
+	display: block;
+	width: 400px;
+      }
+      span:before,
+      span:after,
+      div.span:before{
+	display: table;
+	line-height: 0;
+	content: "";
+	clear: both;
+      }
+    }
+
+}
+hr{
+  height: 1px;
+  margin: 70px 0;
+  background-image: -webkit-linear-gradient(left, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 7%, rgba(0,0,0,0.1) 89%, rgba(0,0,0,0) 100%);
+  border: 0;
+}
+hr.mini{
+  @extend hr;
+  margin:5px 0;
+}

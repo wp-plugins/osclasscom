@@ -1,0 +1,39 @@
+body.sitemap {
+    hr {
+	margin: 0 0 20px;
+    }
+    .tbl-header {
+	ul {
+	    font-size: 1.5em;
+	    list-style: none;
+	    padding: 0;
+	    margin: 0;
+	    text-align: center;
+	}
+	li {
+	    font-weight: bold;
+	    display: inline-block;
+	    margin: 0 5px;
+	}
+	a {
+	    font-weight: normal;
+	    color: $color-main;
+	    text-decoration: none;
+	}
+	a:hover {
+	    text-decoration: underline;
+	}
+    }
+    .tbl-content {
+	ul {
+	    list-style: none;
+	    padding: 0;
+	    margin: 0;
+	}
+	li {
+	    float: left;
+	    width: 33.33%;
+	    margin: 0 0 5px 0;
+	}
+    }
+}

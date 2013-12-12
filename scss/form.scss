@@ -1,0 +1,114 @@
+.form-horizontal{
+    display: table;
+    margin:0px auto;
+    .control-group {
+	display: table-row;
+    }
+    .control-label {
+	text-align: right;
+	padding-right:20px
+    }
+    .control-label,
+    .controls {
+	display: table-cell;
+	padding-bottom:10px;
+    }
+    .controls{
+	$width:390px;
+	width:$width;
+	min-width:$width;
+	position: relative;
+	input[type="text"],
+	input[type="password"],
+	input[type="email"],
+	textarea{
+	    width:$width;
+	}
+	p{
+	    margin-top:0;
+	}
+	textarea{
+	    height:120px;
+	}
+	select {
+	    width: 405px;
+	    height: 36px;
+	    border: 1px solid #CCC;
+	    font-size: 14px;
+	}
+	div.error{
+	    width: 405px;
+	    box-sizing: border-box;
+	    -webkit-box-sizing: border-box;
+	    -moz-box-sizing: border-box;
+		text-align: left;
+	    padding: 5px 10px;
+	    background-color: #FF3232;
+		color: #FFF;
+	    @include border-radius(0px 0px 4px 4px);
+	}
+    }
+}
+body.page-step-2 {
+    .form-horizontal{
+	display:block;
+    }
+    .step{
+	.step-content {
+	    .wrapper{
+		margin: 0 auto;
+		margin-left: 150px;
+		padding-top: 0;
+	    }
+	    p.wrapper {
+		margin-left: auto;
+		width: 90%;
+		text-align: left;
+		padding: 40px 0;
+	    }
+	    select {
+		display: block;
+		min-width: 200px;
+		width: auto;
+	    }
+	    .step-design {
+		.wrapper {
+		    margin: 0;
+		    margin-left: 70px;
+		}
+		.theme {
+		    position: relative;
+		    padding: 10px;
+		    margin: 10px;
+		    background: darken($color-main,5%);
+		    float: left; cursor: pointer;
+		    @include border-radius(5px);
+		}
+		.theme-active .selected, .theme:hover .selected {
+		    position: absolute;
+		    top: 10px;
+		    left: 10px;
+		    width: 300px;
+		    height: 155px;
+		    background-color: rgba(0, 0, 0, 0.3);
+		}
+		.theme-active .selected {
+		    background-image: url('../img/check.png');
+		    background-repeat: no-repeat;
+		    background-position: center;
+		}
+	    }
+	}
+    }
+    input.input-hidden {
+	display:none;
+    }
+}
+body.demo {
+    .form-horizontal .controls {
+	width: 600px;
+    }
+    h2.t-thin {
+	font-weight: normal;
+    }
+}
