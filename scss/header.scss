@@ -1,0 +1,43 @@
+#header-osc{
+  background-color: $color-main;//fade($color-main,75%);
+  height:100px;
+  position: relative;
+  z-index:2;
+}
+#nav{
+  margin:30px 0 0;
+  padding:0;
+  list-style:none;
+  float:right;
+  li{
+    float: left;
+    margin:5px;
+    a{
+      color:#fff;
+      background-color:transparent;
+      @include border-radius(4px);
+      padding: 5px 10px;
+      text-decoration: none;
+      font-size: 1em;
+    }
+    a:hover{
+      color:$color-main;
+      background-color:#fff;
+    }
+  }
+  li.active{
+    a{
+      color:$color-main;
+      background-color:#fff;
+    }
+  }
+}
+#logo-osc {
+  width: 255px;
+  height: 88px;
+  display: block;
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  text-indent:-9999px;
+}

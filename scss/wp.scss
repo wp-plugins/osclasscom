@@ -1,0 +1,40 @@
+#wpfooter::before {
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	background: white;
+	content: "";
+	display: block;
+	height: 100%;
+	width: 100%;
+	padding-left: 39px;
+	margin-left: -19px;
+	z-index: 0;
+	padding-top: 2px;
+}
+#wpfooter p {
+	z-index: 1;
+	position: relative;
+}
+#wpwrap{
+    background-color: #522c76;
+}
+#adminmenushadow, #adminmenuback{
+    z-index: 0;
+}
+#wpwrap{
+    background-color: #522c76;
+}
+.wrapper-box-container {
+    position: relative;
+}
+#wpcontent .spinner {
+    background: none;
+    background-color: rgba(82,44,118,0.8);
+    position: absolute;
+    margin: 0;
+    padding: 0;
+}
+#wp-osclass .step .step-header h1 {
+    margin-left: 10px;
+}

@@ -1,0 +1,134 @@
+.control-group.hide,
+.step.hide{
+    display: none;
+}
+.step{
+    margin-bottom:10px;
+
+    .step-header{
+	$bgStepHeader:darken($color-main,5%);
+	background-color: $bgStepHeader;
+	padding-left:15px;
+	cursor: pointer;
+
+	h1{
+	    text-align:left;
+	    line-height: pem(32);
+	    margin:0;
+	}
+    }
+    .step-content-job-opening {
+	.step-controls {
+	    width: 100%;
+	}
+    }
+    .job-opening {
+	position: relative;
+	display: none;
+	.step-subheader{
+	    $bgStepHeader:darken($color-main,5%);
+	    background-color: $bgStepHeader;
+	    padding-left: 15px;
+	    border-left:solid 64px darken($color-main,8%);
+	    cursor: pointer;
+	    height: 64px;
+	    h2 {
+		line-height: 2em;
+		font-size: 2em;
+		text-align: left;
+		margin: 0;
+		span {
+		    position: absolute;
+		    right: 0;
+		    top: -12px;
+		    padding: 10px 30px;
+		}
+	    }
+	}
+	h3 {
+	    text-align: left;
+	    font-size: 1.5em;
+	    font-weight: bold;
+	    font-family: "osclass-extra-light","lato-hairline","HelveticaNeueW01-Thin", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, Verdana, sans-serif;
+	    margin-top: 0;
+	}
+	.step-subheader:before {
+	    content: attr(data-job-opening);
+	    color: #FFF;
+	    text-align: left;
+	    width: 50px;
+	    position: absolute;
+	    left: 25px;
+	    font-size: 2em;
+	    top: 22px;
+	    font-weight: 100;
+	    font-family: "osclass-extra-light","lato-hairline","HelveticaNeueW01-Thin", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, Verdana, sans-serif;
+	}
+    }
+    .step-content{
+	.wrapper{
+	    display: none;
+	    padding:40px 0 30px 0;
+	}
+    }
+    .form-horizontal{
+	margin-left:150px;
+    }
+    .tip{
+	background-color:rgba(0,0,0,0.6);
+	color:#fff;
+	font-size: pem(13);
+	position: absolute;
+	left:100%;
+	margin-left: 15px;
+	top:0;
+	padding:10px;
+	min-width: 220px;
+	text-align:left;
+
+	a{
+	    background-color:rgba(255,255,255,0.5);
+	    color:black;
+	    margin:3px 0;
+	    padding:4px 7px;
+	    text-decoration: none;
+	    @include border-radius(3px);
+	    display: block;
+	}
+	a:hover{
+	    background-color:#ffffff;
+	}
+    }
+    .controls{
+	$width:500px;
+	width:$width;
+	min-width:$width;
+	input[type="text"],
+	input[type="password"],
+	input[type="email"],
+	textarea{
+	    width:$width;
+	}
+    }
+}
+.step.active{
+    background-color:lighten($color-main,5%);
+    .step-header{
+	background-color: #8749C2;
+	cursor: auto;
+    }
+    .step-content{
+	.job-opening{
+	    display: block;
+	}
+	.job-opening-active {
+	    .wrapper {
+		opacity: 1;
+	    }
+	}
+	.wrapper {
+	    opacity: 1;
+	    display: block;
+	}
+    }
+}

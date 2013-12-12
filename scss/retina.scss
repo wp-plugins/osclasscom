@@ -1,0 +1,9 @@
+#logo-osc {
+  background-image:url(../img/logo@1x.png)        ;
+  background-size:255px 138px;
+}
+@media (-moz-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
+  #logo-osc {
+    background-image:url(../img/logo@2x.png);
+  }
+}

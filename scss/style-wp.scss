@@ -1,0 +1,40 @@
+$color-main:#522c76;
+$color-second:#c277b0;
+$color-white:#ffffff;
+$color-background:#f5f5f5;
+$color-text-dark:#452563;
+$prefix:"#wp-osclass";
+@import "mixins.scss";
+
+#{$prefix}{
+    input[type=text],
+    input[type=password],
+    input[type=number],
+    input[type=search],
+    input[type=email],
+    input[type=url],
+    textarea {
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	-ms-box-sizing: content-box;
+	box-sizing: content-box;
+    }
+    @import "buttons.scss";
+    @import "inputs.scss";
+    @import "form.scss";
+    @import "layout.scss";
+    @import "header.scss";
+    @import "home.scss";
+    @import "typo.scss";
+    @import "steps.scss";
+    @import "footer.scss";
+    @import "retina.scss";
+    @import "chosen.scss";
+    @import "chosen-name.scss";
+    @import "listings.scss";
+    @import "sitemap.scss";
+}
+@import "spinner.scss";
+@import "wp.scss";
+@import "responsive.scss";
+@import "form.responsive.scss";
