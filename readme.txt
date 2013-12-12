@@ -12,9 +12,9 @@ Create your own job board to post and manage job offers in your company or organ
 
 == Description ==
 
-Create your own job board to post and manage job offers in your company or organization via Wordpress with [Osclass.com](http://osclass.com "Osclass").
+Create your own job board or connect your existing one to post and manage job offers in your company or organization via Wordpress with [Osclass.com](http://osclass.com "Osclass").
 
-If you are using Wordpress you can now publish and manage the job offers in your company absolutely for free with Osclass technology, HR software used already by over 4.000 companies all over the world.
+If you are using WordPress you can now publish and manage the job offers in your company absolutely for free with Osclass technology, HR software used already by over 4.000 companies all over the world.
 
 - 100% free
 - Get number of resumes from the candidates interested in your job offers thanks to the agreements between Osclass and major job websites worldwide for free.
@@ -25,18 +25,23 @@ If you are using Wordpress you can now publish and manage the job offers in your
 - Allow your users to apply with their Linkedin profile or by uploading their CV.
 - Share all your jobs and job offers via social networks.
 
-Install and configure your Wordpress job board in less than two minutes with Osclass. After uploading and activating the plugin, you just need to access your job board’s dashboard (that will be always available at chosendomain.osclass.com/oc-admin) to publish your first job offer. You can also configure the appearance of your job board and modify all the settings from your dashboard. What is more, you can activate the option of spontaneous applications that allows you to receive CV without having any vacancies published.
+Install and configure your WordPress job board in less than two minutes with Osclass. After uploading and activating the plugin, you just need to access your job board’s dashboard (that will be always available at chosendomain.osclass.com/oc-admin) to publish your first job offer. You can also configure the appearance of your job board and modify all the settings from your dashboard. What is more, you can activate the option of spontaneous applications that allows you to receive CV without having any vacancies published.
 
 == Installation ==
 
-This section describes how to install the plugin and get it working.
+This section describes how to install the plugin and get it working. There are two options: create your job board or connect it to an existing one.
 
-1. Download Osclass Job board Plugin.
-2. Activate "Osclass.com" in the "Plugins" admin panel using the Activate link.
-3. Go to "Osclass job board" section menu.
-4. Create your account through the Sign Up page at "Osclass jobboard" section.
-5. Once your jobboard is connected to your wordpress a new page named "job vacancies" is created.
-6. You will can access to your job board using your wordpress admin panel.
+1. Go to "Jobs" section menu.
+2. Create your account through the Sign Up page at "Jobs" section.
+3. Once your jobboard is connected to your WordPress a new page named "Jobs" is created.
+4. You'll be able to access your job board using your WordPress admin panel.
+
+Or if you already have a job board in Osclass.com:
+
+1. Go to "Jobs" section menu.
+2. Connect your osclass.com account to your WordPress.
+3. You'll need to get your api key from your job board
+4. You'll be able to access your job board using your WordPress admin panel.
 
 == Frequently Asked Questions ==
 
@@ -81,7 +86,7 @@ You can visit our [http://osclass.com/faq](http://osclass.com/faq "osclass.com")
 
 = 1.0.1 =
 
-* Use wordpress functions to get feed content.
+* Use WordPress functions to get feed content.
 
 = 1.0 =
 
