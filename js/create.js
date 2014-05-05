@@ -122,6 +122,9 @@ jQuery(document).ready(function(){
             'micro[language]': {
                 valueNotEquals: "default"
             },
+            'micro[country]': {
+                required: true
+            },
             'micro[domain]': {
                 accept:"^[a-z]+$",
                 maxlength: 14,
@@ -144,6 +147,7 @@ jQuery(document).ready(function(){
                 required: osclasscom.langs.js_email_required,
                 email: osclasscom.langs.js_email_valid
             },
+            'micro[country]': osclasscom.langs.js_country_required,
             'micro[password]': osclasscom.langs.js_password_required,
             'micro[domain]': {
                 required: osclasscom.langs.js_domain_required,

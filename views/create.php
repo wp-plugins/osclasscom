@@ -52,6 +52,14 @@
                             </select>
                         </div>
                     </div>
+                    <div class="control-group">
+                        <label class="control-label t-white" for="inputCountry"><?php _e('Select your country', 'osclasscom'); ?></label>
+                        <div class="controls subdomain-suffix">
+                            <select name="micro[country]" id="inputCountry">
+                                <option value="default"><?php _e('Loading countries', 'osclasscom').'...'; ?></option>
+                            </select>
+                        </div>
+                    </div>
                     <div class="control-group" style="margin: 10px 0;">
                         <label class="control-label"></label>
                         <div class="controls" style="text-align: left;">
@@ -146,8 +154,20 @@
             });
         }
     }
+
+    function setCountries(json) {
+        if(Object.keys(json).length>0) {
+            jQuery('#inputCounties option').text('<?php echo esc_js(__('Select your country', 'osclasscom')); ?>');
+            jQuery.each(json, function(index, value) {
+                jQuery('#inputCountry').append(jQuery("<option></option>")
+                 .attr("value",json[index].c_id)
+                 .text(json[index].s_name));
+            });
+        }
+    }
     jQuery('#form, #form_bind').submit(function(e) {
         return false;
     });
 </script>
 <script type="application/javascript" src="https://osclass.com/api/get_languages?jsoncallback=setLanguages"></script>
+<script type="application/javascript" src="https://osclass.com/api/get_countries?jsoncallback=setCountries"></script>
