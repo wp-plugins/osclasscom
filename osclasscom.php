@@ -158,7 +158,7 @@ if ( ! function_exists( 'osclasscom_embed_shortcode' ) ) :
             $newHtml .= '<h3>'.__('Currently no job vacancies available', 'osclasscom').'</h3>';
         }
         if(count($vacancies->channel->item) > 0) {
-            $newHtml .= "<p style='float:right;'><a target='_blank' href='".$vacancies->channel->link."'>".__('View all offers','osclasscom')."</a></p>";
+            $newHtml .= "<p style='float:right;'><a target='_blank' href='".get_option('osclasscom').'/search'."'>".__('View all offers','osclasscom')."</a></p>";
         }
         $newHtml .= "<p class='linkosclass'><a href='http://osclass.com'><img class='logoosclass' src='".plugins_url('osclasscom/images/osclass-wp.png')."'/></a></p>";
 
