@@ -60,20 +60,16 @@ class Osclasscom
             'print_create_osclasscom',
             plugins_url('osclasscom/images/icon.png')
         );
-
-        add_action( 'admin_print_styles-' . $page, array($this, 'admin_styles') );
-        add_action( 'admin_print_scripts-' . $page, array($this, 'admin_scripts') );
     }
 
-    function admin_styles()
+    function admin_scripts($hook)
     {
-        wp_enqueue_style('osclasscom-style');
-        wp_enqueue_style('osclasscom-custom');
-    }
+        if($hook=='toplevel_page_osclasscom') {
+            wp_enqueue_script('osclasscom-jquery-validate');
+            wp_enqueue_script('osclasscom-create');
 
-    function admin_scripts()
-    {
-        wp_enqueue_script('osclasscom-jquery-validate');
-        wp_enqueue_script('osclasscom-create');
+            wp_enqueue_style('osclasscom-style');
+            wp_enqueue_style('osclasscom-custom');
+        }
     }
 }

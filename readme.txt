@@ -3,8 +3,8 @@ Contributors: (garciademarina, juanramondiaz, osclass)
 Donate link: http://osclass.com/
 Tags: jobs, job, career, manager, vacancy, hiring, hire, listing, social, media, recruiting, recruitment, employer, application, board
 Requires at least: 3.0
-Tested up to: 3.8
-Stable tag: 1.2
+Tested up to: 3.9
+Stable tag: 1.3.1
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -74,6 +74,14 @@ You can visit our [http://osclass.com/faq](http://osclass.com/faq "osclass.com")
 5. Job listing widget in the right sidebar
 
 == Changelog ==
+
+= 1.3.1 =
+
+* Fixed javascript issues
+
+= 1.3 =
+
+* Added country dropdown at create your job board
 
 = 1.2 =
 
