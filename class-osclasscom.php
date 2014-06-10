@@ -54,7 +54,7 @@ class Osclasscom
     {
         $page = add_menu_page(
             'Jobs - Osclass.com',
-            'Jobs',
+            __('Jobs', 'osclasscom'),
             'administrator',
             'osclasscom',
             'print_create_osclasscom',

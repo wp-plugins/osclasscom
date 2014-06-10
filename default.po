@@ -1,0 +1,287 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Osclasscom wordpress plugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-10 15:28+0100\n"
+"PO-Revision-Date: 2014-06-10 15:38+0100\n"
+"Last-Translator: carlos <carlos@osclass.org>\n"
+"Language-Team: Osclass team <info@osclass.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk\n"
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/create.php:3
+msgid "Only lowercase letters (a-z) are allowed"
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/create.php:4
+msgid "Please enter your name"
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/create.php:5
+msgid "Please enter your email"
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/create.php:6
+msgid "Please enter a valid email"
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/create.php:7
+msgid "Please enter your company name"
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/create.php:8
+msgid "Please enter your password"
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/create.php:9
+msgid "Please enter your custom address"
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/create.php:10
+msgid "Please enter no more than 14 characters"
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/create.php:11
+msgid "Sorry, that site already exists!"
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/create.php:12
+msgid "Sorry, that site does not already exists!"
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/create.php:13
+msgid "Sending..."
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/create.php:14
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/views/create.php:74
+msgid "Sign up for free!"
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/create.php:15
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/views/create.php:113
+msgid "Connect now!"
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/create.php:16
+msgid "Please select your language"
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/create.php:17
+msgid "Please enter your api key"
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/create.php:18
+msgid "Error connecting to your site. Check the API Key you've entered is correct."
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/create.php:39
+msgid "Show menu"
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/osclasscom.php:84
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/class/widget-osclasscom.php:80
+msgid "Jobs"
+msgstr "Empleos"
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/osclasscom.php:160
+msgid "Currently no job vacancies available"
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/osclasscom.php:163
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/class/widget-osclasscom.php:60
+msgid "View all offers"
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/osclasscom.php:174
+msgid "Osclass jobboard"
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/class/widget-osclasscom.php:14
+msgid "Jobs from Osclass.com"
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/class/widget-osclasscom.php:15
+msgid "Display your job offers"
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/class/widget-osclasscom.php:37
+msgid "No vacancies available"
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/class/widget-osclasscom.php:38
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/class/widget-osclasscom.php:61
+msgid "Powered by osclass.com"
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/class/widget-osclasscom.php:86
+msgid "Title:"
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/class/widget-osclasscom.php:90
+msgid "Number of vacancies to show:"
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/views/create.php:3
+msgid "Get free recruiting software for your company!"
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/views/create.php:5
+msgid "Sign up"
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/views/create.php:8
+msgid "Or, do you already have a job board in Osclass.com?"
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/views/create.php:8
+msgid "Import your job offers into your site."
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/views/create.php:16
+msgid "Create new job board"
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/views/create.php:23
+msgid "Company"
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/views/create.php:29
+msgid "Email"
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/views/create.php:31
+msgid "E-mail"
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/views/create.php:35
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/views/create.php:37
+msgid "Password"
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/views/create.php:41
+msgid "Domain name"
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/views/create.php:48
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/views/create.php:149
+msgid "Select your language"
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/views/create.php:51
+msgid "Loading languages"
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/views/create.php:56
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/views/create.php:160
+msgid "Select your country"
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/views/create.php:59
+msgid "Loading countries"
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/views/create.php:67
+msgid "Do you work for a HR consultancy?"
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/views/create.php:73
+msgid "By clicking \"Sign up\" you agree to our"
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/views/create.php:73
+msgid "terms & conditions"
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/views/create.php:73
+msgid "and"
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/views/create.php:73
+msgid "privacy policy"
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/views/create.php:84
+msgid "Connect with your Osclass job board"
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/views/create.php:89
+msgid "If you already have an osclass.com job board"
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/views/create.php:90
+msgid "You need to enter into your admin panel and copy your Api key located under <br/>Settings -> Api key"
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/views/create.php:96
+msgid "Your domain name"
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/views/create.php:104
+msgid "You api key"
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/views/create.php:125
+msgid "This could take a while"
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/views/main.php:19
+msgid "Add new vacancy"
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/views/main.php:20
+msgid "Add a new vacancy, add killer questions and share it on social networks"
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/views/main.php:24
+msgid "View your jobboard"
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/views/main.php:25
+msgid "The applicants access your job board and apply to the vacancies available. See how it looks and manage all the settings. Make sure it looks good!"
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/views/main.php:29
+msgid "Dashboard"
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/views/main.php:30
+msgid "Manage easily all the vacancies, filter candidates' profiles, add notes from your Dashboard. Customize the design to adapt it to your needs in a few clicks."
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/views/main.php:34
+msgid "Manage applicants"
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/views/main.php:35
+msgid "View the candidates' profiles, filter them, contact them or send an email. You can also import already exisiting profiles manually."
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/views/main.php:39
+msgid "Manage vacancies"
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/views/main.php:40
+msgid "Add new vacancies, modify, delete already existing ones or see which have received most visits. You can also set extra questions to be answered during the application process."
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/views/main.php:44
+msgid "Manage settings"
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/views/main.php:45
+msgid "Manage settings to adapt job board to your needs. Customize the design, change your domain name, enable spontanoues applications, your contact details and more."
+msgstr ""
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/views/main.php:50
+msgid "Jobs page"
+msgstr "Página de empleos"
+
+#: /Users/ssuareza/projects/osclasscom-wordpress-plugin/trunk/views/main.php:51
+msgid "View your vacancies page in your wordpress site."
+msgstr ""
+

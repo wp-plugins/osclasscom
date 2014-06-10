@@ -16,6 +16,9 @@ if( !defined('WPINC') ) {
     die;
 }
 
+load_plugin_textdomain('osclasscom', false, basename( dirname( __FILE__ ) ) . '/languages' );
+
+
 require_once('class-osclasscom.php');
 require_once('class/widget-osclasscom.php');
 add_action( 'plugins_loaded', array( 'Osclasscom', 'get_instance' ) );
@@ -78,7 +81,7 @@ function osclass_create_bind() {
     if( get_option('osclasscom_pageid')=='' ) {
         $post = array(
             'post_content'   => '[osclasscom]',
-            'post_name'      => 'jobs',
+            'post_name'      => __('Jobs', 'osclasscom'),
             'post_title'     => __('Jobs', 'osclasscom'),
             'post_status'    => 'publish',
             'post_type'      => 'page'
@@ -169,7 +172,7 @@ if ( ! function_exists( 'osclasscom_embed_shortcode' ) ) :
 
     function osclasscom_plugin_meta( $links, $file ) { // add 'Plugin page' and 'Donate' links to plugin meta row
         if ( strpos( $file, 'osclass-admin.php' ) !== false ) {
-            $links = array_merge( $links, array( '<a href="http://osclass.com" target="_blank" title="Plugin page">' . __('Osclass jobboard') . '</a>' ) );
+            $links = array_merge( $links, array( '<a href="http://osclass.com" target="_blank" title="Plugin page">' . __('Osclass jobboard', 'osclasscom') . '</a>' ) );
         }
         return $links;
     }
