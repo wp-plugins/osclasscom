@@ -3,7 +3,7 @@ Contributors: (garciademarina, juanramondiaz, osclass)
 Donate link: http://osclass.com/
 Tags: jobs, job, career, manager, vacancy, hiring, hire, listing, social, recruiting, recruitment, employer, application, board, job board
 Requires at least: 3.0
-Tested up to: 3.9
+Tested up to: 4.1
 Stable tag: 1.3.2
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
